@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 app.use(express.static("public"));
-app.use('/chatbot', function (req, res) {
+app.get('/chatbot', function (req, res) {
     console.log('Request Type:', req.method);
     res.send('se ejecuta la rest de chatbot')
   });
